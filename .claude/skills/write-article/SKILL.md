@@ -15,6 +15,16 @@ description: 音声メモ（memo.md）から note記事の下書きを作成す�
 5. `.claude/rules/writing-style.md` … 文章品質のルール
 6. `knowledge/article-index.md` … 公開記事一覧（STEP 2.5の関連記事リンク提案で使う）
 
+## STEP 0：記事インデックスの最新化（執筆の最初に毎回）
+メモを受け取って下書きを作り始める前に、`knowledge/article-index.md` を最新化する。
+
+1. note公開API `https://note.com/api/v2/creators/a0003303/contents?kind=note&page=1` を取得する。
+2. 返ってきた記事（`name`・`key`・`publishAt`・`price`）のうち、`article-index.md` にまだ無いものを**新しい順で先頭に追記**する。テーマ列はタイトルから推定して埋める。
+3. page=1 に未掲載分が収まらない場合（前回更新から7記事以上公開）だけ page=2 以降も見る。通常は page=1 で足りる。
+4. ファイル冒頭の「最終更新」日付を当日に直す。
+5. 差分が無ければ何もしない（黙ってSTEP 1へ）。
+6. この最新化は内部処理。ユーザーへの報告は「新着がインデックスに追加された」場合のみ簡潔に伝える。
+
 ## STEP 1：論旨の体系的整理
 メモから以下を抽出・整理する。
 
