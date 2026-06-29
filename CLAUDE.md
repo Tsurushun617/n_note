@@ -19,7 +19,7 @@ note記事を「育てながら」書くための作業フォルダ。
 - `.claude/rules/` → 文章品質のルール（執筆・推敲時に必ず参照）
 - `.claude/skills/write-article/` → 記事執筆の手順（メモを渡すと自動発動）
 - `templates/` → 記事の構成・文字数・導入の固定文
-- `knowledge/` → 公開後に溜める学び（効いた切り口・スベった表現など）
+- `knowledge/` → 公開後に溜める学び（効いた切り口・スベった表現など）。`article-index.md`＝公開記事一覧、`samples/`＝反響記事のお手本
 - `articles/` → 記事ごとのフォルダ（memo / draft / final）
 - `pronpt.md` → 旧プロンプト（参照用の原本。編集しない）
 
