@@ -20,11 +20,12 @@ note記事を「育てながら」書くための作業フォルダ。
 - `.claude/skills/write-article/` → 記事執筆の手順（メモを渡すと自動発動）
 - `templates/` → 記事の構成・文字数・導入の固定文
 - `knowledge/` → 公開後に溜める学び（効いた切り口・スベった表現など）。`article-index.md`＝公開記事一覧、`samples/`＝反響記事のお手本、`reference-*.md`＝他クリエイターの文体研究
-- `articles/` → 記事ごとのフォルダ（memo / draft / final）
+- `articles/` → 記事ごとのフォルダ（memo / outline / draft / final）
 - `pronpt.md` → 旧プロンプト（参照用の原本。編集しない）
 
 ## 作業ルール
 - 記事を書くときは `write-article` スキルに従う。
+- **「記事を書いて」と言われても、いきなり本文を出さない。**まずテーマ候補 → 質疑応答 → 目次（`outline.md`）を出し、承認を得てから本文を書く。
 - 文章は必ず `.claude/rules/writing-style.md` を参照する。
 - 構成・文字数・導入の固定文は `templates/article-template.md` に従う。
 - 執筆前に `knowledge/note-learnings.md` を読み、過去の学びを反映する。
